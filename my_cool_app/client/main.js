@@ -14,7 +14,7 @@ Template.hello.helpers({
   }
 });
 
-Template.hello.helpers({
+Template.body.helpers({
     name() {
     return 'Nikita';
 }
