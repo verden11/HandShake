@@ -42,3 +42,7 @@ Router.route('/lentpage', function(){
 Router.route('/handshakepage', function(){
   this.render('handshakepage');
 });
+
+Router.route('/profilepage', function(){
+  this.render('profilepage');
+});

@@ -49,12 +49,10 @@ meteor-base@1.0.4
 minifier-css@1.1.12
 minifier-js@1.1.12
 minimongo@1.0.17
-mizzao:bootstrap-3@3.3.1_1
 mobile-experience@1.0.4
 mobile-status-bar@1.0.12
 modules@0.6.3
 modules-runtime@0.6.4
-momentjs:moment@2.13.1
 mongo@1.1.9
 mongo-id@1.0.5
 npm-mongo@1.4.44
@@ -67,6 +65,7 @@ reactive-var@1.0.10
 reload@1.1.9
 retry@1.0.8
 routepolicy@1.0.11
+session@1.1.6
 spacebars@1.0.12
 spacebars-compiler@1.0.12
 standard-minifier-css@1.0.7
