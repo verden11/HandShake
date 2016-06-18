@@ -26,3 +26,19 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   }
 });
+
+Router.route('/', function(){
+  this.render('main');
+});
+
+Router.route('/owedpage', function(){
+  this.render('owedpage');
+});
+
+Router.route('/lentpage', function(){
+  this.render('lentpage');
+});
+
+Router.route('/handshakepage', function(){
+  this.render('handshakepage');
+});
