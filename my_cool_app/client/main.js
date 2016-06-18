@@ -14,6 +14,12 @@ Template.hello.helpers({
   }
 });
 
+Template.hello.helpers({
+    name() {
+    return 'Nikita';
+}
+});
+
 Template.hello.events({
   'click button'(event, instance) {
     // increment the counter when button is clicked
