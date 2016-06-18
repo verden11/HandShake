@@ -11,12 +11,38 @@ Template.hello.onCreated(function helloOnCreated() {
 Template.hello.helpers({
   counter() {
     return Template.instance().counter.get();
-  },
+  }
+});
+
+Template.body.helpers({
+    name() {
+      return 'Nikita';
+  }
 });
 
 Template.hello.events({
   'click button'(event, instance) {
     // increment the counter when button is clicked
     instance.counter.set(instance.counter.get() + 1);
-  },
+  }
+});
+
+Router.route('/', function(){
+  this.render('main');
+});
+
+Router.route('/owedpage', function(){
+  this.render('owedpage');
+});
+
+Router.route('/lentpage', function(){
+  this.render('lentpage');
+});
+
+Router.route('/handshakepage', function(){
+  this.render('handshakepage');
+});
+
+Router.route('/profilepage', function(){
+  this.render('profilepage');
 });
