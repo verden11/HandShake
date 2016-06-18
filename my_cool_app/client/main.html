@@ -1,35 +1,37 @@
 <head>
-  <title>Handshake</title>
+    <title>Handshake</title>
 </head>
 
 <body>
 </body>
 
 <template name="main">
-  <p><img align="center" src="loop_Icon.png"></p>
-  <h1 align="center">Hello {{name}}</h1>
-  <h1 align="center">+2,037.52 $</h1>
-  <ul align="center" style="list-style: none;">
-    <li><a href="/handshakepage">Handshake</a></li>
-    <li><a href="/owedpage">Owed</a></li>
-    <li><a href="/lentpage">Lent</a></li>
-    <li><a href="/profilepage">My Profle</a></li>
-  </ul>
+    <div class="text-center">
+        <img src="loop_Icon.png">
+    </div>
+    <h1 class="text-center">Hello {{name}}</h1>
+    <h1 class="text-center">{{ ammount }}</h1>
+    <ul class="text-center" style="list-style: none;">
+        <li><a href="/handshakepage">Handshake</a></li>
+        <li><a href="/owedpage">Owed</a></li>
+        <li><a href="/lentpage">Lent</a></li>
+        <li><a href="/profilepage">My Profle</a></li>
+    </ul>
 </template>
 <template name="owedpage">
-  <p align="center"><img src="pig_in_white.png"></p>
+    <p class="text-center"><img src="pig_in_white.png"></p>
 </template>
 <template name="lentpage">
-  <p align="center"><img src="pig_out_white.png"></p>
+    <p class="text-center"><img src="pig_out_white.png"></p>
 </template>
 <template name="handshakepage">
-  <img src="">
+    <img src="">
 </template>
 <template name="profilepage">
-  <p align="center"><img src="white_profile_icon.png"></p>
+    <p class="text-center"><img src="white_profile_icon.png"></p>
 </template>
 
 <template name="hello">
-  <button align="center">Click Me</button>
-  <p align="center">You've pressed the button {{counter}} times.</p>
+    <button class="text-center">Click Me</button>
+    <p class="text-center">You've pressed the button {{counter}} times.</p>
 </template>
