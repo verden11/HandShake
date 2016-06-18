@@ -43,6 +43,7 @@ Router.route('/', function () {
 });
 
 Router.route('/owedpage', function () {
+    $("body").removeClass().addClass("blue");
     this.render('owedpage');
 });
 
@@ -58,7 +59,7 @@ Router.route('/profilepage', function () {
     this.render('profilepage');
 });
 
-
+//// for the reference
 // Template.simple.events = {
 //
 //     'click input': function () {
