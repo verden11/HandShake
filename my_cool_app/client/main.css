@@ -30,3 +30,36 @@
 .handshakeBottomWrapper {
     padding-bottom: 70px;
 }
+
+.equal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equal > div[class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .equal2, .equal2 > div[class*='col-'] {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex: 1 0 auto;
+    }
+}
+
+.vcenter {
+    justify-content: center;
+}
+
+.owedPage {
+    background-color: #BCDFC0;
+}
+
+.owedList{
+    background-color: #91B395;
+}
