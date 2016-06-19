@@ -11,9 +11,9 @@ Meteor.startup(() => {
     var keyRoman = "defb9296062f4db5b55e01e6d4e2e207";
     var keyJustin = "e44cb882671c4bafaaa57687070d8d9f";
 
-
-    var key = keyRoman;
-    var bearer = bearerRoman;
+    var key = keyJustin;
+    var bearer = bearerJustin;
+    
 
     var id = Meteor.http.call("GET", "https://bluebank.azure-api.net/api/v0.6.3/customers", {
         headers: {
@@ -26,7 +26,7 @@ Meteor.startup(() => {
 
     Meteor.methods({
         getAccounts: function () {
-            var customer = Meteor.http.call("GET", "https://bluebank.azure-api.net/api/v0.6.3/customers/"+id+"/accounts", {
+            var customer = Meteor.http.call("GET", "https://bluebank.azure-api.net/api/v0.6.3/customers/" + id + "/accounts", {
                 headers: {
                     "Ocp-Apim-Subscription-Key": key,
                     "bearer": bearer
@@ -35,7 +35,7 @@ Meteor.startup(() => {
             return customer;
         },
         getInfo: function () {
-            var customer = Meteor.http.call("GET", "https://bluebank.azure-api.net/api/v0.6.3/customers/"+ id, {
+            var customer = Meteor.http.call("GET", "https://bluebank.azure-api.net/api/v0.6.3/customers/" + id, {
                 headers: {
                     "Ocp-Apim-Subscription-Key": key,
                     "bearer": bearer
