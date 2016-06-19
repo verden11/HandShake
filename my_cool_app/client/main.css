@@ -14,9 +14,7 @@
 }
 
 .indexBottom .col-xs-12{
-    /*display: inline-flex;*/
-    /*height: 100%;*/
-    /*padding-bottom: 100%;*/
+    padding-bottom: calc(100% - 268px);
 }
 
 .indexBottom ul{
