@@ -16,3 +16,17 @@
 .indexBottomWrapper {
     padding-bottom: 70px;
 }
+
+.handshakeTop {
+  background-color: #6ACA6B;
+  opacity: 0.44;
+}
+
+.handshakeBottom{
+  background-color: #6ACA6B;
+  opacity: 0.70;
+}
+
+.handshakeBottomWrapper {
+    padding-bottom: 70px;
+}
