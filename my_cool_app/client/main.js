@@ -4,6 +4,7 @@ import {Meteor} from 'meteor/meteor';
 
 import './main.html';
 import './index.html';
+import './create_handshake.html';
 
 Template.hello.onCreated(function helloOnCreated() {
     // counter starts at 0
