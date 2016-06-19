@@ -4,7 +4,10 @@ import {Meteor} from 'meteor/meteor';
 
 import './main.html';
 import './index.html';
-import './create_handshake.html';
+import './handshake.html';
+import './owed.html';
+import './lent.html';
+import './profile.html'
 
 Template.hello.onCreated(function helloOnCreated() {
     // counter starts at 0
@@ -17,21 +20,11 @@ Template.hello.helpers({
     }
 });
 
-Template.index.helpers({
-    name() {
-        return 'Nikita';
-    },
-    ammount(){
-        // get customer on page load up
-        var ammount = 0;
-        Meteor.call('getAccounts', function (err, response) {
-            ammount = response[0].accountBalance;
-            // Session.set('serverSimpleResponse', response);
-            return ammount;
-        });
-        return ammount;
-    }
-});
+// Template.index.helpers({
+//     name() {
+//         return 'Nikita';
+//     }
+// });
 
 Template.hello.events({
     'click button'(event, instance) {
@@ -44,21 +37,21 @@ Router.route('/', function () {
     this.render('index');
 });
 
-Router.route('/owedpage', function () {
+Router.route('/owed', function () {
     // $("body").removeClass().addClass("blue");
-    this.render('owedpage');
+    this.render('owed');
 });
 
-Router.route('/lentpage', function () {
-    this.render('lentpage');
+Router.route('/lent', function () {
+    this.render('lent');
 });
 
-Router.route('/handshakepage', function () {
-    this.render('handshakepage');
+Router.route('/handshake', function () {
+    this.render('input');
 });
 
-Router.route('/profilepage', function () {
-    this.render('profilepage');
+Router.route('/profile', function () {
+    this.render('profile');
 });
 
 //// for the reference
@@ -81,13 +74,21 @@ Meteor.call('getAccounts', function (err, response) {
 Template.index.onRendered(function () {
 
     Meteor.call('getAccounts', function (err, result) {
-        // Session.set('ammount', result[0].accountBalance + " " + result[0].accountCurrency);
-        Session.set('ammount', '$ Lorem $');
+        console.dir(result[0]);
+        Session.set('ammount', result[0].accountBalance + " " + result[0].accountCurrency);
+    });
+
+    Meteor.call('getInfo', function (err, result) {
+        console.dir(result);
+        Session.set('name', result.givenName);
     });
 
 });
 Template.index.helpers({
     ammount: function () {
         return Session.get('ammount');
+    },
+    name: function () {
+        return Session.get('name');
     }
 });
