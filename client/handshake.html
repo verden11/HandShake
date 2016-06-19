@@ -1,76 +1,65 @@
 <template name="input">
 
-    <!-- <div class="dropdown my-elements my-increase-height">
-        <button class="btn btn-default dropdown-toggle my-full-width-menu my-increase-height text-left" type="button" style="text-align:left; padding-left:6px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Select Recipient
-            <span class="caret pull-right"></span>
-        </button>
-        <ul class="dropdown-menu my-dropdown-men my-full-width-menu" aria-labelledby="dropdownMenu1">
-            {{#each recipients}}
-                <li><a href="#">{{this}}</a></li>
-            {{/each}}
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Add new recipient...</a></li>
-        </ul>
-    </div>
 
-    <input id="amount" type="number" class="form-control my-elements my-increase-height" placeholder="Loan Amount e.g. £20.00" aria-describedby="basic-addon1">
-
-    <input id="date" type="date" class="form-control my-elements my-increase-height my-input" placeholder="Time period" aria-describedby="basic-addon1">
-
-    <textarea id="message" class="form-control my-elements my-increase-height" placeholder="Custom message..." rows="3"></textarea>
-
-    <button type="button" class="btn btn-default my-full-width-menu my-button my-increase-height new-handshake">Send Handshake</button>
-
-    <p><img src="footer_newhandshake_black.png"></p>
-
-
-    <ul>
-
-    </ul> -->
-
-    <div class="container-fluid">
-      <div class="row text-center handshakeTop">
-          <div class="col-xs-6 col-xs-offset-3">
-              <img class="img-responsive" src="/headerIcons/header_handtiltblack.png">
-              <p>New Handshake</p>
-          </div>
-      </div>
-      <div class="row handshakeBottomWrapper handshakeBottom">
-        <br>
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle col-xs-10 col-xs-offset-1" type="button" data-toggle="dropdown">Recipient
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu col-xs-10 col-xs-offset-1">
-            {{#each recipients}}
-                <li><a href="#">{{this}}</a></li>
-            {{/each}}
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Add new recipient...</a></li>
-          </ul>
+    <div class="container-fluid handshakeWrapper">
+        <div class="row text-center handshakeTop">
+            <div class="col-xs-5 col-xs-offset-4">
+                <img class="img-responsive" src="/headerIcons/header_handtiltblack.png">
+                <p>New Handshake</p>
+            </div>
         </div>
-        <br>
-        <!-- <button class="btn btn-default dropdown-toggle text-left" type="button" style="text-align:left; padding-left:6px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Select Recipient
-            <span class="caret pull-right"></span>
-        </button> -->
-        <!-- <br>
-        <ul class="dropdown-menu my-dropdown-men my-full-width-menu" aria-labelledby="dropdownMenu1">
-            {{#each recipients}}
-                <li><a href="#">{{this}}</a></li>
-            {{/each}}
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Add new recipient...</a></li>
-        </ul> -->
-        <br>
-        <input id="amount" type="number" class="form-control my-elements my-increase-height" placeholder="Loan Amount e.g. £20.00" aria-describedby="basic-addon1">
-        <br>
-        <input id="date" type="date" class="form-control my-elements my-increase-height my-input" placeholder="Time period" aria-describedby="basic-addon1">
-        <br>
-        <textarea id="message" class="form-control my-elements my-increase-height" placeholder="Custom message..." rows="3"></textarea>
-        <br>
-        <button type="button" class="btn btn-default btn-lg col-xs-10 col-xs-offset-1 btn-success">Send</button>
-        <br>
+        <div class="row handshakeBottomWrapper handshakeBottom">
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle col-xs-10 col-xs-offset-1" type="button"
+                        data-toggle="dropdown">Recipient
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu col-xs-10 col-xs-offset-1">
+                    {{#each recipients}}
+                        <li><a href="#">{{this}}</a></li>
+                    {{/each}}
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Add new recipient...</a></li>
+                </ul>
+            </div>
+            <br>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1">
+            <br>
+            <input id="amount" type="number" class="form-control my-elements my-increase-height"
+                   placeholder="Loan Amount e.g. £20.00">
+            <br>
+            <input id="date" type="date" class="form-control my-elements my-increase-height my-input"
+                   placeholder="Time period">
+            <br>
+            <textarea id="message" class="form-control my-elements my-increase-height" placeholder="Custom message..."
+                      rows="3"></textarea>
+            <br>
+            <button type="button" class="btn btn-default btn-block btn-success">Send</button>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="row">
+                <br>
+                <div class="btn-group-justified">
+                    <a class="btn" href="/handshake">
+                        <img src="/navigationMenuIcons/Footer_newhandshake_black.png" class="img-responsive">
+                    </a>
+                    <a class="btn" href="/lent">
+                        <img src="/navigationMenuIcons/Footer_piggyup.png" class="img-responsive">
+                    </a>
+                    <a class="btn" href="/">
+                        <img src="/navigationMenuIcons/Footer_house.png" class="img-responsive">
+                    </a>
+                    <a class="btn" href="/owed">
+                        <img src="/navigationMenuIcons/Footer_piggydown.png" class="img-responsive">
+                    </a>
+                    <a class="btn" href="/profile">
+                        <img src="/navigationMenuIcons/Footer_white_profile_icon.png" class="img-responsive">
+                    </a>
+                </div>
+
+            </div>
+        </footer>
     </div>
-  </div>
 </template>

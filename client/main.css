@@ -17,15 +17,15 @@
     padding-bottom: 70px;
 }
 
-.handshakeTop {
-  background-color: #6ACA6B;
-  opacity: 0.44;
-}
+/*.handshakeTop {*/
+/*background-color: #6ACA6B;*/
+/*opacity: 0.44;*/
+/*}*/
 
-.handshakeBottom{
-  background-color: #6ACA6B;
-  opacity: 0.70;
-}
+/*.handshakeBottom{*/
+/*background-color: #6ACA6B;*/
+/*opacity: 0.70;*/
+/*}*/
 
 .handshakeBottomWrapper {
     padding-bottom: 70px;
@@ -60,6 +60,24 @@
     background-color: #BCDFC0;
 }
 
-.owedList{
+.owedList {
     background-color: #91B395;
+}
+
+.handshakeWrapper {
+    background-color: #A4D8A7;
+    padding-bottom: 25px;
+}
+
+.lentPage {
+    background-color: #F398A0;
+}
+
+.lentList {
+    background-color: #F9F8F8;
+}
+
+.profilew {
+    background-color: #F3DFAD;
+    padding-bottom: 85px;
 }
