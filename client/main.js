@@ -75,7 +75,7 @@ Template.index.onRendered(function () {
 
     Meteor.call('getAccounts', function (err, result) {
         console.dir(result[0]);
-        Session.set('name', result[0].accountBalance + " " + result[0].accountCurrency);
+        Session.set('ammount', result[0].accountBalance + " " + result[0].accountCurrency);
     });
 
     Meteor.call('getInfo', function (err, result) {
