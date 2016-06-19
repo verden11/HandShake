@@ -5,50 +5,14 @@
     background-color: #698FB5;
 }
 
-.indexTop .col-xs-12{
-    /*padding-bottom: 20%;*/
+.indexTop h1 {
+    color: #FDFDFD;
 }
 
-.indexBottom{
+.indexBottom {
     background-color: #4B7AA7;
 }
 
-.indexBottom .col-xs-12{
-    padding-bottom: calc(100% - 268px);
-}
-
-.indexBottom ul{
-    list-style: none;
-}
-
-.my-full-width-menu {
-    min-width:auto;
-    width:100%;
-}
-
-.my-elements {
-    margin-bottom: 8%;
-}
-
-.my-input {
-    vertical-align: middle;
-}
-
-.my-col {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.my-sym {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.my-increase-height {
-    height: 40px;
-}
-
-.my-button {
-    color: white;
-    background-color: green;
+.indexBottomWrapper {
+    padding-bottom: 70px;
 }
