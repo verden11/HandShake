@@ -1,10 +1,22 @@
 /* CSS declarations go here */
 
 /* index page */
-.owedpage{
-    background-color: red;
+.indexTop {
+    background-color: #698FB5;
 }
 
-.blue{
-    background-color: blue;
+.indexTop .col-xs-12{
+    /*padding-bottom: 20%;*/
+}
+
+.indexBottom{
+    background-color: #4B7AA7;
+}
+
+.indexBottom .col-xs-12{
+    /*padding-bottom: 100%;*/
+}
+
+.indexBottom ul{
+    list-style: none;
 }
