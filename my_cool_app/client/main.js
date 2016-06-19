@@ -4,7 +4,10 @@ import {Meteor} from 'meteor/meteor';
 
 import './main.html';
 import './index.html';
-import './create_handshake.html';
+import './handshake.html';
+import './owed.html';
+import './lent.html';
+import './profile.html'
 
 Template.hello.onCreated(function helloOnCreated() {
     // counter starts at 0
@@ -44,21 +47,21 @@ Router.route('/', function () {
     this.render('index');
 });
 
-Router.route('/owedpage', function () {
+Router.route('/owed', function () {
     // $("body").removeClass().addClass("blue");
-    this.render('owedpage');
+    this.render('owed');
 });
 
-Router.route('/lentpage', function () {
-    this.render('lentpage');
+Router.route('/lent', function () {
+    this.render('lent');
 });
 
-Router.route('/handshakepage', function () {
-    this.render('handshakepage');
+Router.route('/handshake', function () {
+    this.render('input');
 });
 
-Router.route('/profilepage', function () {
-    this.render('profilepage');
+Router.route('/profile', function () {
+    this.render('profile');
 });
 
 //// for the reference
