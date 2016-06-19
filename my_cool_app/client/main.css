@@ -5,18 +5,14 @@
     background-color: #698FB5;
 }
 
-.indexTop .col-xs-12{
-    /*padding-bottom: 20%;*/
+.indexTop h1 {
+    color: #FDFDFD;
 }
 
-.indexBottom{
+.indexBottom {
     background-color: #4B7AA7;
 }
 
-.indexBottom .col-xs-12{
-    padding-bottom: calc(100% - 268px);
-}
-
-.indexBottom ul{
-    list-style: none;
+.indexBottomWrapper {
+    padding-bottom: 70px;
 }
