@@ -3,6 +3,7 @@ import {ReactiveVar} from 'meteor/reactive-var';
 import {Meteor} from 'meteor/meteor';
 
 import './main.html';
+import './index.html';
 
 Template.hello.onCreated(function helloOnCreated() {
     // counter starts at 0
@@ -15,7 +16,7 @@ Template.hello.helpers({
     }
 });
 
-Template.main.helpers({
+Template.index.helpers({
     name() {
         return 'Nikita';
     },
@@ -39,11 +40,11 @@ Template.hello.events({
 });
 
 Router.route('/', function () {
-    this.render('main');
+    this.render('index');
 });
 
 Router.route('/owedpage', function () {
-    $("body").removeClass().addClass("blue");
+    // $("body").removeClass().addClass("blue");
     this.render('owedpage');
 });
 
@@ -71,21 +72,20 @@ Router.route('/profilepage', function () {
 //     }
 // };
 Meteor.call('getAccounts', function (err, response) {
-            ammount = response[0].accountBalance;
-            // Session.set('serverSimpleResponse', response);
-            return ammount;
-        });
+    ammount = response[0].accountBalance;
+    // Session.set('serverSimpleResponse', response);
+    return ammount;
+});
 
-Template.main.onRendered(function() {
+Template.index.onRendered(function () {
 
-        Meteor.call('getAccounts', function(err, result) {
-            console.log(result);
-            Session.set('ammount', result[0].accountBalance + " " + result[0].accountCurrency);
-        });
+    Meteor.call('getAccounts', function (err, result) {
+        Session.set('ammount', result[0].accountBalance + " " + result[0].accountCurrency);
+    });
 
 });
-Template.main.helpers({
-    ammount: function() {
+Template.index.helpers({
+    ammount: function () {
         return Session.get('ammount');
     }
 });
