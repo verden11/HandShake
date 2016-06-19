@@ -1,11 +1,39 @@
 <template name="profile">
-    <p>Hello, this is PROFILE page</p>
+    <div class="container-fluid profilew">
 
-    <ul class="list-group">
-        <li class="list-group-item"><a href="/handshake">Handshake</a></li>
-        <li class="list-group-item"><a href="/owed">Owed</a></li>
-        <li class="list-group-item"><a href="/lent">Lent</a></li>
-        <li class="list-group-item"><a href="/profile">My Profile</a></li>
-        <li class="list-group-item"><a href="/">HOME</a></li>
-    </ul>
+        <div class="row">
+            <div class="col-xs-12">
+                <img class="img-responsive center-block" src="/headerIcons/header_profile_man.png"
+                     style="max-height: 120px;">
+            </div>
+            <div class="col-xs-8 col-xs-offset-2">
+                <img class="img-responsive white" src="/ProfilePics/justin.jpg">
+                <h1>Hello Justin</h1>
+                <h2>14384.1 GBP</h2>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <br>
+            <div class="btn-group-justified">
+                <a class="btn" href="/handshake">
+                    <img src="/navigationMenuIcons/Footer_newhandshake.png" class="img-responsive">
+                </a>
+                <a class="btn" href="/lent">
+                    <img src="/navigationMenuIcons/Footer_piggyup.png" class="img-responsive">
+                </a>
+                <a class="btn" href="/">
+                    <img src="/navigationMenuIcons/Footer_house.png" class="img-responsive">
+                </a>
+                <a class="btn" href="/owed">
+                    <img src="/navigationMenuIcons/Footer_piggydown.png" class="img-responsive">
+                </a>
+                <a class="btn" href="/profile">
+                    <img src="/navigationMenuIcons/Footer_white_profile_icon_black.png" class="img-responsive">
+                </a>
+            </div>
+
+        </div>
+    </div>
 </template>
