@@ -20,21 +20,11 @@ Template.hello.helpers({
     }
 });
 
-Template.index.helpers({
-    name() {
-        return 'Nikita';
-    },
-    ammount(){
-        // get customer on page load up
-        var ammount = 0;
-        Meteor.call('getAccounts', function (err, response) {
-            ammount = response[0].accountBalance;
-            // Session.set('serverSimpleResponse', response);
-            return ammount;
-        });
-        return ammount;
-    }
-});
+// Template.index.helpers({
+//     name() {
+//         return 'Nikita';
+//     }
+// });
 
 Template.hello.events({
     'click button'(event, instance) {
@@ -84,13 +74,21 @@ Meteor.call('getAccounts', function (err, response) {
 Template.index.onRendered(function () {
 
     Meteor.call('getAccounts', function (err, result) {
-        // Session.set('ammount', result[0].accountBalance + " " + result[0].accountCurrency);
-        Session.set('ammount', '$ Lorem $');
+        console.dir(result[0]);
+        Session.set('name', result[0].accountBalance + " " + result[0].accountCurrency);
+    });
+
+    Meteor.call('getInfo', function (err, result) {
+        console.dir(result);
+        Session.set('name', result.givenName);
     });
 
 });
 Template.index.helpers({
     ammount: function () {
         return Session.get('ammount');
+    },
+    name: function () {
+        return Session.get('name');
     }
 });
